@@ -1,3 +1,69 @@
+<!DOCTYPE html>
 <html>
-    Welcome!
+
+<head>
+    <title>🧙‍♂️ MDW 🧙‍♂️</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script>
+        function writeList(js_list) {
+        }
+
+        function readList(source_lang) {
+            var l_bracket;
+            var r_bracket;
+        }
+
+        function convertList() {
+        }
+
+        function copyOutputToClipboard() {
+            navigator.clipboard.writeText($('#output').val()).then(
+                () => {
+                    console.log("good!");
+                },
+                () => {
+                    console.log("bad!");
+                },
+            );
+        }
+
+        $(function () {
+            $('#copy').on("click", copyOutputToClipboard);
+        });
+    </script>
+</head>
+
+<body>
+    <label for="type">Type:</label>
+    <select id="type">
+        <option value="list">List / Matrix</option>
+    </select>
+    <label for="source">Source:</label>
+    <select id="source">
+        <option value="sage">Sage</option>
+        <option value="mathematica">Mathematica</option>
+    </select>
+    <label for="target">Target:</label>
+    <select id="target">
+        <option value="sage">Sage</option>
+        <option value="mathematica">Mathematica</option>
+    </select>
+    <br>
+    <label for="input">Input:</label><br>
+    <textarea id="input">
+
+    </textarea>
+    <br>
+    <button id="swap">Swap ↕</button>
+    <br>
+    <label for="output">Output:</label><br>
+    <textarea id="output">
+
+    </textarea>
+    <br>
+    <button id="convert">Go! 🪄</button>
+    <button id="copy">Copy</button>
+</body>
+
 </html>
