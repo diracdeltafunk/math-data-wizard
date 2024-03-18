@@ -1,1 +1,1 @@
-# math-data-wizard
+# math-data-wizard 🧙‍♂️
