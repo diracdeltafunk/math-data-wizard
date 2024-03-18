@@ -9,9 +9,31 @@
         function writeList(js_list) {
         }
 
-        function readList(source_lang) {
+        function readList(source_lang, str) {
             var l_bracket;
             var r_bracket;
+            var delimiter = ",";
+            switch (source_lang) {
+                default:
+                case "sage":
+                    l_bracket = "[";
+                    r_bracket = "]";
+                    break;
+                case "mathematica":
+                    l_bracket = "{";
+                    r_bracket = "}";
+                    break;
+            }
+            str = str.replace(/\s/g, "");
+            substrs = str.split(delimiter);
+            if (substrs.length == 1) {
+                return [str];
+            }
+            var result = [];
+            for (substr of substrs) {
+                result.push(readList(substr));
+            }
+            return result;
         }
 
         function convertList() {
