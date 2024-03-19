@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <h1>🧙‍♂️ Math Data Wizard</h1>
+    <h1>🧙‍♂️ Math Data Wizard 🧙‍</h1>
     <label for="type">Type:</label>
     <select id="type">
         <option value="list">List / Matrix</option>
@@ -25,11 +25,17 @@
     <select id="source">
         <option value="sage">Sage</option>
         <option value="mathematica">Mathematica</option>
+        <option value="gap">GAP</option>
+        <option value="macaulay2">Macaulay2</option>
+        <option value="maple">Maple</option>                
     </select>
     <label for="target">Target:</label>
     <select id="target">
         <option value="sage">Sage</option>
         <option value="mathematica">Mathematica</option>
+        <option value="gap">GAP</option>
+        <option value="macaulay2">Macaulay2</option>
+        <option value="maple">Maple</option>        
     </select>
     <br>
     <label for="input">Input:</label><br>
@@ -40,9 +46,7 @@
     <button id="swap">Swap ↕</button>
     <br>
     <label for="output">Output:</label><br>
-    <textarea id="output">
-
-    </textarea>
+    <textarea id="output"></textarea>
     <br>
     <button id="convert">Go! 🪄</button>
     <button id="copy">Copy</button>

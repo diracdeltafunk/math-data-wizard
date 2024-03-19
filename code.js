@@ -6,6 +6,13 @@ function listSyntax(lang) {
         case "mathematica":
             return { l_bracket: "{", r_bracket: "}", delimiter: "," };
             break;
+        case "gap":
+            return {l_bracket: "[", r_bracket: "]", delimiter: "," };
+            break;
+        case "macaulay2":
+            return { l_bracket: "{", r_bracket: "}", delimiter: "," };
+        case "maple":
+            return {l_bracket: "[", r_bracket: "]", delimiter: "," };
     }
     console.error("Language " + lang + " not recognized!");
 }
