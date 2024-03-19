@@ -2,61 +2,21 @@
 <html>
 
 <head>
-    <title>🧙‍♂️ MDW 🧙‍♂️</title>
+
+    <title>Data Wizard</title>
+
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
         integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
-    <script>
-        function writeList(js_list) {
-        }
+    <script src="code.js"></script>
 
-        function readList(source_lang, str) {
-            var l_bracket;
-            var r_bracket;
-            var delimiter = ",";
-            switch (source_lang) {
-                default:
-                case "sage":
-                    l_bracket = "[";
-                    r_bracket = "]";
-                    break;
-                case "mathematica":
-                    l_bracket = "{";
-                    r_bracket = "}";
-                    break;
-            }
-            str = str.replace(/\s/g, "");
-            substrs = str.split(delimiter);
-            if (substrs.length == 1) {
-                return [str];
-            }
-            var result = [];
-            for (substr of substrs) {
-                result.push(readList(substr));
-            }
-            return result;
-        }
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%221em%22 font-size=%2280%22>🧙‍♂️</text></svg>">
 
-        function convertList() {
-        }
-
-        function copyOutputToClipboard() {
-            navigator.clipboard.writeText($('#output').val()).then(
-                () => {
-                    console.log("good!");
-                },
-                () => {
-                    console.log("bad!");
-                },
-            );
-        }
-
-        $(function () {
-            $('#copy').on("click", copyOutputToClipboard);
-        });
-    </script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <h1>🧙‍♂️ Math Data Wizard</h1>
     <label for="type">Type:</label>
     <select id="type">
         <option value="list">List / Matrix</option>
