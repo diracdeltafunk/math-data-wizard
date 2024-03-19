@@ -50,4 +50,14 @@ $(function () {
         }
     });
     $('#swap').on("click", swap);
+
+    // create a new keyboard event and set the key to "Enter"
+    $("#input").on("keyup", function(event) {
+        if (event.ctrlKey && event.which === 13) {
+            $("#convert").trigger("click");
+        }
+    });
 });
+
+
+
